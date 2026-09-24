@@ -32,4 +32,4 @@
 ## 🛠️ Стек технологій (Планується для реалізації)
 * **Frontend:** React.js, Tailwind CSS
 * **API:** The Movie Database (TMDb API)
-* **UI Design:** Figma 
+* **UI Design:** Figma .
