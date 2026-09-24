@@ -24,8 +24,8 @@
 
 Повний інтерактивний UI/UX прототип, компонентна система та всі екрани додатка (Discover, Movie Details, Wishlist, Auth Modal) доступні за посиланням:
 
-🔗 **[Відкрити проєкт MovieMood у Figma]([https://www.figma.com](https://www.figma.com/make/LgRoMXCGdbiVnQ5Si3WO75/MovieMood-web-app-design?t=8cd5OjVipbVVuEX9-1))**
-🔗 **[Відкрити сайт MovieMood з Figma]([https://www.figma.com]([https://www.figma.com/make/LgRoMXCGdbiVnQ5Si3WO75/MovieMood-web-app-design?t=8cd5OjVipbVVuEX9-1)](https://maize-buzz-91555302.figma.site/))**
+🔗 **[Відкрити проєкт MovieMood у Figma](https://www.figma.com/make/LgRoMXCGdbiVnQ5Si3WO75/MovieMood-web-app-design?t=8cd5OjVipbVVuEX9-1)**  
+🔗 **[Відкрити сайт MovieMood з Figma](https://maize-buzz-91555302.figma.site/)**
 
 ---
 
