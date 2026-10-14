@@ -1,0 +1,136 @@
+.root {
+  padding-top: 96px;
+}
+
+.visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  /* картинку (background-image) задає JSX через style, а тут лише
+     її положення: тепер вона займає ПРАВУ ПОЛОВИНУ, ліва — суцільна */
+  background-color: var(--color-surface-solid);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 54% 100%;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.2);
+}
+
+/* плавний перехід суцільного кольору в картинку зліва направо */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color-surface-solid) 0%,
+    var(--color-surface-solid) 44%,
+    transparent 72%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  padding: 0 0 0 64px;
+}
+
+.content h1 {
+  margin: 18px 0;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.content p {
+  max-width: 510px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.recommendation {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  width: 220px;
+  padding: 18px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-surface-modal);
+  backdrop-filter: blur(16px);
+  color: var(--color-text);
+}
+
+.recommendation span {
+  color: var(--color-primary-light);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.recommendation strong {
+  display: block;
+  margin: 9px 0 6px;
+  color: var(--color-text);
+}
+
+.recommendation p {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .root {
+    width: 100%;
+    padding-top: 76px;
+  }
+
+  /* на телефоні навпаки: картинка зверху, текст знизу */
+  .visual {
+    align-items: flex-end;
+    min-height: 600px;
+    background-position: top center;
+    background-size: 100% 52%;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      transparent 20%,
+      var(--color-surface-solid) 52%
+    );
+  }
+
+  .content {
+    padding: 0 24px 135px;
+  }
+
+  .content h1 {
+    font-size: 42px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .recommendation {
+    right: 24px;
+    bottom: 20px;
+    left: 24px;
+    width: auto;
+  }
+}

@@ -1,0 +1,107 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 200px;
+  padding: 38px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-solid);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.root::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    var(--color-primary-soft),
+    var(--color-surface-subtle),
+    rgba(47, 196, 178, 0.07)
+  );
+  z-index: 0;
+}
+
+.glow {
+  position: absolute;
+  top: -220px;
+  left: 25%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  filter: blur(80px);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.person {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 390px;
+}
+
+.person small {
+  color: var(--color-primary-light);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.person h1 {
+  margin: 7px 0 6px;
+  color: var(--color-text);
+}
+
+.person p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+.actions {
+  position: absolute;
+  right: 30px;
+  bottom: 24px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.actions :global(.button) {
+  min-height: 35px;
+}
+
+.actions > button:last-child {
+  border: 0;
+  background: none;
+  color: #cf6e76;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .root {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 760px) {
+  .root {
+    padding: 25px;
+  }
+  .person {
+    min-width: 0;
+  }
+  .actions {
+    position: static;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}

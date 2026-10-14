@@ -1,0 +1,256 @@
+.home-hero {
+  padding-top: 96px;
+}
+
+.home-hero__visual {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 540px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивний зріз оверлею під теми */
+.home-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay-gradient);
+}
+
+.home-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  padding: 0 0 64px 64px;
+}
+
+.home-hero__content h1 {
+  margin: 18px 0;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+  color: var(--color-text);
+}
+
+.home-hero__content p {
+  max-width: 510px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.home-hero__buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.home-hero__recommendation {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  width: 220px;
+  padding: 18px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-modal);
+  backdrop-filter: blur(16px);
+  color: var(--color-text);
+}
+
+.home-hero__recommendation span {
+  color: var(--color-primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.home-hero__recommendation strong {
+  display: block;
+  margin: 9px 0 6px;
+  color: var(--color-text);
+}
+
+.home-hero__recommendation p {
+  margin: 0;
+  color: var(--color-success);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.mood-selector {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.mood-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 190px;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--banner-card-bg);
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.25s,
+    transform 0.25s,
+    background 0.25s;
+}
+
+.mood-card:hover,
+.mood-card--active {
+  border-color: var(--color-primary);
+  background: var(--color-surface-solid);
+  transform: translateY(-4px);
+}
+
+.mood-card__icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 19px;
+  border-radius: 14px;
+  background: var(--color-surface-subtle);
+  font-size: 23px;
+}
+
+.mood-card strong {
+  margin-bottom: 7px;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.mood-card small {
+  color: var(--color-text-subtle);
+  line-height: 1.45;
+}
+
+.mood-card i {
+  margin-top: auto;
+  padding-top: 14px;
+  color: var(--color-primary);
+  font-size: 10px;
+  font-style: normal;
+  opacity: 0;
+}
+
+.mood-card:hover i,
+.mood-card--active i {
+  opacity: 1;
+}
+
+/* Блок "Твій особистий кінопростір" для світлої теми */
+.benefits {
+  display: grid;
+  grid-template-columns: 0.75fr 1.5fr;
+  gap: 55px;
+  padding: 36px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-solid);
+  color: var(--color-text);
+}
+
+.benefits h2 {
+  margin: 12px 0;
+  color: var(--color-text);
+}
+
+.benefits p {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.benefits__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.benefits__grid article {
+  padding: 19px;
+  border: 1px solid var(--color-border);
+  border-radius: 13px;
+  background: var(--color-surface-subtle);
+  color: var(--color-text);
+}
+
+.benefits__grid article h3 {
+  color: var(--color-text);
+  margin: 8px 0 4px;
+}
+
+.benefits__grid article > span {
+  color: var(--color-primary);
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .mood-selector {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-hero {
+    width: 100%;
+    padding-top: 76px;
+  }
+
+  .home-hero__visual {
+    min-height: 560px;
+  }
+
+  .home-hero__content {
+    padding: 0 24px 135px;
+  }
+
+  .home-hero__content h1 {
+    font-size: 42px;
+  }
+
+  .home-hero__buttons {
+    flex-direction: column;
+  }
+
+  .home-hero__recommendation {
+    right: 24px;
+    bottom: 20px;
+    left: 24px;
+    width: auto;
+  }
+
+  .mood-selector {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 12px;
+  }
+
+  .mood-card {
+    flex: 0 0 220px;
+  }
+
+  .benefits {
+    padding: 24px;
+  }
+
+  .benefits__grid {
+    grid-template-columns: 1fr;
+  }
+}

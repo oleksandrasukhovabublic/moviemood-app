@@ -1,0 +1,94 @@
+.root {
+  display: grid;
+  grid-template-columns: 0.7fr 1.8fr;
+  align-items: center;
+  gap: 30px;
+  padding: 25px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-solid);
+  backdrop-filter: blur(var(--blur-glass));
+  color: var(--color-text);
+}
+
+.platforms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.platform {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  align-items: center;
+  gap: 9px;
+  padding: 11px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 11px;
+  background: var(--color-surface-subtle);
+  color: var(--color-text);
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.netflix {
+  background: #e50914;
+}
+
+.megogo {
+  background: #5e35db;
+}
+
+.sweet {
+  background: #e3286d;
+}
+
+.platform strong, .platform small {
+  display: block;
+}
+
+.platform strong {
+  color: var(--color-text);
+  font-size: 13px;
+}
+
+.platform small {
+  color: var(--color-text-subtle);
+  font-size: 9px;
+}
+
+.platform button {
+  grid-column: 1 / -1;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: var(--color-surface-solid);
+  color: var(--color-text);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.platform button:hover {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+@media (max-width: 760px) {
+
+  .root {
+    grid-template-columns: 1fr;
+  }
+
+  .platforms {
+    grid-template-columns: 1fr;
+  }
+}

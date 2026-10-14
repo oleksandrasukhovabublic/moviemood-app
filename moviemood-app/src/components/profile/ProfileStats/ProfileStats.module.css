@@ -1,0 +1,46 @@
+.root {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  margin-left: auto;
+}
+
+.root div {
+  min-width: 95px;
+  padding: 5px 20px;
+  border-left: 1px solid var(--color-border-strong);
+  text-align: center;
+}
+
+.root strong,
+.root span {
+  display: block;
+}
+
+.root strong {
+  font-size: 25px;
+  color: var(--color-text);
+}
+
+.root span {
+  color: var(--color-text-subtle);
+  font-size: 9px;
+}
+
+@media (max-width: 1000px) {
+  .root {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .root {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .root div {
+    flex: 1;
+    min-width: 0;
+    padding: 4px 8px;
+  }
+}

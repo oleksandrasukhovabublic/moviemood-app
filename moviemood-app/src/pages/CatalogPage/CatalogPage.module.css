@@ -1,0 +1,81 @@
+.root {
+  min-height: 100vh;
+  padding-top: 122px;
+  padding-bottom: 80px;
+}
+
+.heading {
+  margin-bottom: 30px;
+}
+
+/* дві колонки: зліва фільтри (липка панель), справа результати */
+.layout {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+/* sticky: панель «прилипає» під шапкою, поки гортаєш список фільмів */
+.sidebar {
+  position: sticky;
+  top: 92px;
+}
+
+.results {
+  min-width: 0;
+}
+
+.heading h1 {
+  margin: 12px 0 8px;
+  font-size: 43px;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.heading p {
+  color: var(--color-text-muted);
+}
+
+.collectionAction {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-text-subtle);
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.card:hover .collectionAction {
+  background: var(--color-surface-subtle);
+  color: var(--color-primary-light);
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .root {
+    padding-top: 84px;
+  }
+
+  .heading h1 {
+    font-size: 34px;
+  }
+
+  .collectionAction {
+    opacity: 1;
+  }
+}

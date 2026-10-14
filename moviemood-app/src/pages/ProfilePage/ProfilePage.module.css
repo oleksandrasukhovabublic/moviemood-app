@@ -1,0 +1,11 @@
+.root {
+  min-height: 100vh;
+  padding-top: 122px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 760px) {
+  .root {
+    padding-top: 94px;
+  }
+}

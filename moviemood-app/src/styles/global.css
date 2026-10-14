@@ -1,0 +1,125 @@
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+.section-wrap {
+  width: min(
+    calc(100% - 48px),
+    var(--container-width)
+  );
+  margin-inline: auto;
+}
+
+.section {
+  padding: 42px 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-primary-light);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* коротка лінія перед підписом (якщо немає крапки <i>) */
+.eyebrow:not(:has(i))::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.eyebrow i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 15px var(--color-accent);
+}
+
+.button {
+  min-height: 44px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  background: var(--gradient-primary);
+  color: var(--color-on-primary);
+  box-shadow:
+    0 10px 28px rgba(245, 165, 36, 0.28);
+}
+
+.button--primary:hover {
+  box-shadow:
+    0 14px 35px rgba(245, 165, 36, 0.45);
+}
+
+.button--glass {
+  border-color: var(--color-border-strong);
+  background: rgba(255, 240, 215, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+.button--glass:hover {
+  background: rgba(255, 240, 215, 0.13);
+}
+
+.text-button {
+  border: 0;
+  background: none;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.text-button:hover {
+  color: var(--color-primary-light);
+}
+
+@media (max-width: 760px) {
+  .section-wrap {
+    width: min(
+      calc(100% - 28px),
+      var(--container-width)
+    );
+  }
+
+  .section {
+    padding: 32px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

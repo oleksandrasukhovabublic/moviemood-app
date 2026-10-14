@@ -1,0 +1,37 @@
+.root {
+  /* 6 колонок: перші три картки по 2 колонки, дві останні — по 3 */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.root > * {
+  grid-column: span 2;
+}
+
+.root > :nth-child(n + 4) {
+  grid-column: span 3;
+}
+
+@media (max-width: 1000px) {
+  .root {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .root > *,
+  .root > :nth-child(n + 4) {
+    grid-column: auto;
+  }
+
+  .root > :last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .root {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 12px;
+  }
+}

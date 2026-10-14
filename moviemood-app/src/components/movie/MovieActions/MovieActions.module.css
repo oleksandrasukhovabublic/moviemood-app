@@ -1,0 +1,35 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.action {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 11px;
+  background: var(--color-surface-subtle);
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action:hover {
+  border-color: var(--color-primary);
+  background: var(--color-surface-solid);
+}
+
+.action.activeHeart {
+  border-color: rgba(229, 9, 20, 0.6);
+  background: var(--color-danger);
+  color: #ffffff;
+}
+
+.action.activeStar {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}

@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 10px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 13px;
+  background: var(--color-surface-solid);
+  color: var(--color-text);
+}
+
+.root img {
+  width: 62px;
+  height: 70px;
+  border-radius: 9px;
+  object-fit: cover;
+}
+
+.root strong,
+.root span {
+  display: block;
+}
+
+.root strong {
+  color: var(--color-text);
+  font-size: 13px;
+}
+
+.root span {
+  color: var(--color-text-subtle);
+  font-size: 9px;
+}

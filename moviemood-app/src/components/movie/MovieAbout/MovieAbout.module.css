@@ -1,0 +1,48 @@
+.root {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  gap: 60px;
+  padding: 65px 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.copy > p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.copy dl {
+  display: flex;
+  gap: 45px;
+}
+
+.copy dl div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.copy dt {
+  color: var(--color-text-subtle);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.copy dd {
+  margin: 0;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .root {
+    grid-template-columns: 1fr;
+  }
+
+  .copy dl {
+    gap: 22px;
+  }
+}

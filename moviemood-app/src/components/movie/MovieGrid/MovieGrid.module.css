@@ -1,0 +1,46 @@
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+/* горизонтальна стрічка зі свайпом: картки не стискаються, а прокручуються */
+.strip {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 14px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.strip > * {
+  flex: 0 0 clamp(190px, 21vw, 250px);
+  scroll-snap-align: start;
+}
+
+.catalog {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 26px 18px;
+}
+
+@media (max-width: 1000px) {
+  .five {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .catalog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .five,
+  .catalog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 12px;
+  }
+}
