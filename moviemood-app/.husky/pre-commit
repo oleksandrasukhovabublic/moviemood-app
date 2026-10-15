@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Запуск перевірки якості коду перед коммітом..."
+npm run lint
+npm run format
