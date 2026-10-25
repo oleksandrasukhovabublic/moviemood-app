@@ -1,0 +1,15 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Хук виконується з кореня репозиторію, а команди npm потрібні з папки проєкту
+cd "$(dirname "$0")/.."
+
+echo "🔍 Запуск перевірки якості коду перед комітом..."
+
+npm run lint
+
+npm run format:check || {
+  echo ""
+  echo "✖ Код відформатовано не за Prettier. Виконай: npm run format, потім git add -A і повтори коміт."
+  exit 1
+}

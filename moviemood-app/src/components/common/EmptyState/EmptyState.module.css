@@ -1,0 +1,5 @@
+.root {
+  padding: 80px 20px;
+  color: var(--color-text-muted);
+  text-align: center;
+}

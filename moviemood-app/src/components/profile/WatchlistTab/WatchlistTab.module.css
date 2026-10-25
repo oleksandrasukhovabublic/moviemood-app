@@ -1,0 +1,35 @@
+.watchedToggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+}
+
+.watchedToggle input {
+  display: none;
+}
+
+.watchedToggle > span {
+  width: 26px;
+  height: 14px;
+  padding: 2px;
+  border-radius: 10px;
+  background: var(--color-surface-subtle);
+}
+
+.watchedToggle > span::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-text-subtle);
+  transition: 0.2s;
+}
+
+.watchedToggle input:checked + span::after {
+  background: var(--color-on-primary);
+  transform: translateX(12px);
+}
