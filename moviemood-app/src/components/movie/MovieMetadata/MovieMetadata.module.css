@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 17px;
+  color: var(--color-text);
+}
+
+.root > span {
+  padding-left: 10px;
+  border-left: 1px solid var(--color-border-strong);
+  color: var(--color-text-muted);
+}
+
+.root strong {
+  color: var(--color-rating);
+}
