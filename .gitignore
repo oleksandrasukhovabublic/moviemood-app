@@ -1,0 +1,26 @@
+# залежності та збірка
+node_modules/
+dist/
+
+# змінні оточення (секрети)
+.env
+.env.*
+!.env.example
+
+# логи
+*.log
+npm-debug.log*
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# редактори та системні файли
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# локальна «база даних» мок-сервера (створюється при першому запуску)
+server/db.json

@@ -1,0 +1,47 @@
+.root {
+  margin-top: 64px;
+  padding: 36px 0 28px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: 20px;
+}
+
+.inner p {
+  margin-top: 4px;
+}
+
+.links {
+  display: flex;
+  gap: 22px;
+}
+
+.links a {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: var(--color-primary-light);
+}
+
+@media (max-width: 760px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
