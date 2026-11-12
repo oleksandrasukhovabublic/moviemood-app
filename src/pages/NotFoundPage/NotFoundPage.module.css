@@ -1,0 +1,38 @@
+.root {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 14px;
+  min-height: 78vh;
+  padding-top: 110px;
+  text-align: center;
+}
+
+.code {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-display);
+  font-size: clamp(88px, 18vw, 180px);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.root h1 {
+  font-size: 30px;
+}
+
+.root p {
+  max-width: 420px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}

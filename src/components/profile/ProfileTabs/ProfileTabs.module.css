@@ -1,0 +1,46 @@
+.root {
+  display: flex;
+  gap: 30px;
+  margin-top: 34px;
+  border-bottom: 1px solid var(--color-border-strong);
+}
+
+.root button {
+  position: relative;
+  padding: 0 0 16px;
+  border: 0;
+  background: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.root button span {
+  margin-left: 6px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background: var(--color-surface-subtle);
+  color: var(--color-text);
+}
+
+.root button.active {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.root button.active::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 -1px;
+  height: 2px;
+  background: var(--color-primary-light);
+}
+
+@media (max-width: 760px) {
+  .root {
+    gap: 18px;
+    overflow-x: auto;
+  }
+  .root button {
+    flex: none;
+  }
+}

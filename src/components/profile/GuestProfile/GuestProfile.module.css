@@ -1,0 +1,25 @@
+.root {
+  max-width: 620px;
+  margin: 80px auto;
+  padding: 60px 36px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-solid);
+  text-align: center;
+  color: var(--color-text);
+}
+
+.root > span {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  font-size: 35px;
+}
+
+.root p {
+  color: var(--color-text-muted);
+}
