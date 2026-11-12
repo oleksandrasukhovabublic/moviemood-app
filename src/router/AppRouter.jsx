@@ -7,9 +7,6 @@ import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
 import ProfilePage from '../pages/ProfilePage/ProfilePage';
 import { ROUTES } from './routes';
 
-// Таблиця маршрутів: яка адреса → яка сторінка.
-// Усі маршрути вкладені в AppLayout (шапка + фон + футер), тому шапка не перемальовується
-// під час переходів, а змінюється лише вміст <Outlet /> усередині неї.
 export default function AppRouter({ headerProps, movieProps, profileProps, language }) {
   const navigate = useNavigate();
 

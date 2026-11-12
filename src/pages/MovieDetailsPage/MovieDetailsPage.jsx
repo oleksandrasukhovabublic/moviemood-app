@@ -28,7 +28,6 @@ export default function MovieDetailsPage({
   onAddToCollection,
   onCreateCollection,
 }) {
-  // :movieId з адреси /movie/:movieId
   const { movieId } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
@@ -37,14 +36,12 @@ export default function MovieDetailsPage({
   const [collectionOpen, setCollectionOpen] = useState(false);
   const [createOpen, setCreateOpen] = useState(false);
 
-  // Фільм завантажується із сервера: GET /api/movies/:id
   const { movie, loading, error, refetch } = useMovie(movieId);
 
   if (loading && !movie) {
     return <Loader label={t('common.loading')} />;
   }
 
-  // Фільму з такою адресою немає (наприклад /movie/999)
   if (error?.status === 404) {
     return <NotFoundPage language={language} />;
   }
@@ -62,8 +59,6 @@ export default function MovieDetailsPage({
     );
   }
 
-  // location.key === 'default' означає, що сторінку відкрили напряму за посиланням
-  // і «назад» у межах сайту немає, тому ведемо до каталогу.
   const goBack = () => {
     if (location.key === 'default') {
       navigate(ROUTES.catalog);
